@@ -31,4 +31,4 @@ print (Fore.WHITE + "The NTLM Hash :",Fore.BLUE + binascii.hexlify(NTLM).decode(
 print(Fore.WHITE + "The Base64 : " , Fore.MAGENTA + base64Value.decode('utf-8'))
 
 with open('HASHES.txt', 'a') as f:
-	print("MD5 : ", MD5.hexdigest(),'\n', "SHA1 : " , SHA1.hexdigest(),'\n', "SHA256 : " , SHA256.hexdigest(),'\n', "SHA512 : " , SHA512.hexdigest(),'\n', "BASE64 : " , base64Value,'\n', "NTLM : " , binascii.hexlify(NTLM),'\n' ,file=f)
+	print("MD5 : ", MD5.hexdigest(),'\n', "SHA1 : " , SHA1.hexdigest(),'\n', "SHA256 : " , SHA256.hexdigest(),'\n', "SHA512 : " , SHA512.hexdigest(),'\n', "BASE64 : " , base64Value.decode('utf-8'),'\n', "NTLM : " , binascii.hexlify(NTLM).decode('utf-8'),'\n' ,file=f)
